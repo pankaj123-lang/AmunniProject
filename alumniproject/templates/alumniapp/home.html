@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{%static "css/cssstyle.css"%}">
+
+</head>
+<body>
+    <div class="bg" style="background-image: url('{% static 'images/sun.jpg'%}');"></div>
+
+	<div class="A" >
+        <div class="navbar">
+            <nav>
+               <input type="checkbox" id="check" >
+               <label for="check" class="checkbtn" onclick="hide()">
+                 <i class="fa fa-bars"></i>
+                   <!-- <i class="fas fa-bars"></i> -->
+               </label>
+                <a href="https://www.igitsarang.ac.in">IGIT SARANG</a>
+
+                <ul id="menuitems">
+                    <li><a class="active" href="home/">Home</a></li>
+                    <li><a href="aboutus/">About Us</a></li>
+                    <li><a href="news/">Latest News</a></li>
+                    <li><a href="contact/">Contact Us</a></li>
+										<li><a href="adminlogin/">ADMIN</a></li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="form-box"  id="login-form">
+            <div class="btn-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-button" onclick="login()">Login</button>
+                <button type="button" class="toggle-button" onclick="register()">Sign up</button>
+            </div>
+
+        <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="Enter User Id" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="email" class="input-field" placeholder="Email Id" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <button type="submit" class="submit-btn">Register</button>
+        </form>
+     </div>
+	</div>
+	<script >
+	 var x=document.getElementById("login");
+         var y=document.getElementById("register");
+         var z=document.getElementById("btn");
+         function register(){
+             x.style.left="-400px";
+             y.style.left="50px";
+             z.style.left="110px";
+         }
+         function login(){
+             x.style.left="50px";
+             y.style.left="450px";
+             z.style.left="0px";
+         }
+
+     </script>
+
+</body>
+</html>
