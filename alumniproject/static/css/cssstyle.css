@@ -1,0 +1,252 @@
+{% load static %}
+*{
+	margin: 0;
+  	padding: 0;
+
+  font-family: sans-serif;
+}
+body{
+  margin: 0;
+    padding: 0;
+  font-family: sans-serif;
+	/* background-image: url("{%static 'images/sun.jpg'%}"); */
+  /*background-repeat: no-repeat;
+  background-size: cover;*/
+  /*animation: animate 16s ease-in-out infinite;*/
+
+}
+.bg{
+  background-size: cover;
+	height: 600px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+.bg::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background:#000;
+  opacity: 0.0;
+}
+.input-group input:focus{
+  border-bottom-color: #5656db;
+}
+/*@keyframes animate{
+  0%,100%{
+    background-image: url(sun.jpg);
+  }
+  25%{
+    background-image: url(study.jpg);
+  }
+  50%{
+    background-image: url(background.jpg);
+  }
+  75%{
+    background-image: url(sun.jpg);
+  }
+}*/
+.login{
+	height: 100%;
+	width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+.form-box{
+	width: 350px;
+  height: 480px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 60%;
+  left: 50%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 5px;
+  border-radius: 10%;
+  overflow: hidden;
+  box-shadow: 0 0 2px #555;
+
+}
+@media (max-width: 858px){
+  .bg::before{
+    width: 100%;
+
+  }
+  .form-box{
+    left: 50%;
+      }
+  }
+.navbar{
+   height: 80px;
+  width: 100%;
+   position: absolute;
+  transform: translate(-0%,-50%);
+  top: 6%;
+  left: 0%;
+}
+
+.btn-box {
+  border-top: 1px solid white;
+  border-bottom:  1px solid #555;
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px;
+}
+.toggle-button {
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+button{
+  color: white;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+   background: linear-gradient(to right,#00ff00,#ffff00);
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  color: #F88017;
+  text-align: center;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid #777;
+  border-radius: 30px;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+}
+
+.submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right,#00ff00,#ffff00);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+#login {
+  left: 50px;
+}
+#register {
+  left: 450px;
+}
+.check-box {
+  margin: 30px 10px 30px 0;
+}
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+
+div nav{
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+
+div nav ul{
+  float: right;
+  margin-right: 20px;
+}
+div nav ul li{
+	display: inline-block;
+	margin-right: 80px;
+  margin: 0 5px;
+}
+div nav ul li a{
+  color: white;
+	text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+a{
+  color: white;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+	text-decoration: none;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+	display: none;
+}
+#check{
+	display: none;
+}
+@media (max-width: 858px) {
+	div nav ul li a{
+		font-size: 14px;
+	}
+}
+@media (max-width:858px) {
+	.checkbtn{
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 50%;
+		height: 100vh;
+		background: #2c3e50;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	div nav ul li{
+		display: block;
+		margin: 30px;
+		line-height: 20px;
+	}
+	div nav ul li a{
+		font-size: 14px;
+	}
+	a:hover,s:active{
+		background: none;
+		color: #0082e6;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+
+
+}

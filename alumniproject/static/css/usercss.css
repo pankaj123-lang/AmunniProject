@@ -1,0 +1,79 @@
+body{
+	margin:0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.container{
+	width: 380px;
+ 	height: 480px;
+  	max-width: 800px;
+  	margin: auto;
+  	position: absolute;
+  	transform: translate(-50%,-50%);
+  	top: 60%;
+  	left: 50%;
+  	background-color: rgba(0,0,0,0.6);
+  	padding: 5px;
+  	border-radius: 10%;
+  	overflow: hidden;
+  	box-shadow: 0 0 2px #555;
+}
+.bg{
+	background: url(sun.jpg);
+	width: 100%;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 650px;
+}
+.admin{
+	padding: 30px 35%;
+	color: white;
+	text-shadow: 2px solid #555;
+}
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: 0.5s;
+}
+.input-field {
+  width: 100%;
+  color: #F88017;
+  text-align: center;
+  padding: 10px;
+  margin: 5px 40px ;
+
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid white;
+  border-radius: 25px;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+form .check-box {
+  margin: 50px 30px 20px 30px;
+}
+span {
+  color: #777;
+  font-size: 12px;
+  bottom: 68px;
+  position: absolute;
+}
+
+.submit-btn {
+  width: 80%;
+  padding-left: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: block;
+  margin: 5px 70px;
+  background: linear-gradient(to right,#00ff00,#ffff00);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
+}
+/* Admin End*/
